@@ -13,7 +13,7 @@ filename: output.h
 typedef enum{
 	PIN_RESET = 0,
 	PIN_SET = 1
-}OUTPUT_STATUS;
+} OUTPUT_STATUS;
 
 typedef struct {
 	char name[DEV_NAME_LEN];
@@ -27,7 +27,7 @@ typedef struct {
 	void (*WritePinHEX)(OUTPUT_RSRC_T* pRsrc, u16 pinStatus);
 	void (*WritePin)(OUTPUT_RSRC_T* pRsrc, u8 pinIndx, OUTPUT_STATUS level);
 	void (*TogglePin)(OUTPUT_RSRC_T* pRsrc, u8 pinIndx);
-}OUTPUT_DEV_T;
+} OUTPUT_DEV_T;
 
 /* output variables for extern function --------------------------------------*/
 DEV_STATUS outputDevSetup(

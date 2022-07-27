@@ -14,18 +14,15 @@
 #define _OUTPUT_CMD_H
 
 #include "misc.h"
-#include "output.h"
 
 /* Includes ------------------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
+extern const char OUTPUT_HELP[];
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
-extern const char OUTPUT_HELP[];
-//void outputCmdHelp(UART_DEV *huartDev);
-//void outputReport(OUTPUT_DEV_T *pDev, const u8* RtpNo);
-//u8 outputCmd(PIN_T *gpio, u8 gpioLen, const char* CMD, char* cmd, u8 cmdLen);
-u8 outputCmd(OUTPUT_DEV_T* pDev, const char* CMD, u8 brdAddr, char* buff, u16 len);
+u8 outputCmd(void *dev, char* CMD, u8 brdAddr, void (*xprint)(const char* FORMAT_ORG, ...));
+
 #endif /* _OUTPUT_CMD_H */
 
 /******************* (C) COPYRIGHT 2015 INCUBECN *****END OF FILE****/
